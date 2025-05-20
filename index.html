@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdvertMate - Create & Launch AI Ads in Seconds</title>
+    <meta name="description" content="Create, launch, and optimize AI-powered advertising campaigns across 8 platforms with just a few clicks. No experience needed.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="AdvertMate - AI-Powered Advertising Tool">
+    <meta property="og:description" content="Create, launch, and optimize AI ads in seconds across 8 platforms. No experience needed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jvz8.com/c/3346269/418037/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAActJREFUWEftl4FNwzAQRV8ngA0om8AGwAR0A2ACygawQdkANqBMAGxQJqBsQDcAJqDvyJGQk9g+x1RCQkdqFTu++/f77jjOxMxsZPzMAQyN4L8j4JzbAGbAyt0WkfehAEYDcM49AW/AO7ABNoZwC9wAd8AjsFTVzz6QQQDOuTtAABL5G/ACLH2EzrmniPQGWKjqok+6ewGcc1PgHXhV1Xtf+BK4BASyUdWZP38G5sCtqn60gXQCOOcE/gA8q+ok5dw5t41CLoC/AtdxZQisegvAYG+BE1Vdh0Jj8GAncpqTqYZcVU9F5AuYq+pbDqQtAoL/UFW5zjl3XgKPwE9V9SIR4KvLUHICWKvqNHcTOzZFPvP3Mqp71cKU4/C8C+BDVU2yfYAvikhx9pWDiKz9+w1wZFLed53LAYjkZ6p60ZSW2k6cc3m/UtX4/gZYxyCpHMQAIvmqwEuRpyQoRR7OHQQgITet3wMP/lC14lEEAWSpNNAUgEQoIa8FLwGQ82TvSwHkyG9SXo2AHKYkqARvA4hT7s93Kh/bkVwENgUJtxpAbsrjjjinq+28zCz6GID012OM8ZPLpHwogKb+v1N56zr+Bzs5gKEI/AKef+AhUl6g4AAAAABJRU5ErkJggg==">
+
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header section */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f6f9fc 0%, #ffffff 100%);
+        }
+
+        .headline {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .subheadline {
+            font-size: 1.4rem;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Video thumbnail section */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: #edf2f7;
+        }
+
+        .video-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.02);
+        }
+
+        .thumbnail-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .play-button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .video-thumbnail:hover .play-button-overlay {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .play-button-overlay svg {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Benefits section */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Timer section */
+        .timer-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Testimonials section */
+        .testimonials {
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            margin: 40px 0;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a202c;
+            color: #a0aec0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Sticky CTA for mobile */
+        @media (max-width: 768px) {
+            .mobile-sticky-cta {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 15px;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            .mobile-sticky-cta .cta-button {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+            }
+
+            /* Add padding to prevent content from being hidden behind sticky CTA */
+            body {
+                padding-bottom: 80px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="headline">Create, Launch & Optimize AI Ads in Seconds</h1>
+            <p class="subheadline">No Experience Needed. Run Profitable Campaigns Across 8 Platforms with Just a Few Clicks.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Video Thumbnail Section -->
+            <div class="video-container fade-in">
+                <a href="https://jvz8.com/c/3346269/418037/" class="video-thumbnail">
+                    <div class="play-button-overlay">
+                        <svg width="80" height="80" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="12" fill="rgba(0, 0, 0, 0.7)"/>
+                            <path d="M9.5 7.5v9l7.5-4.5z" fill="white"/>
+                        </svg>
+                    </div>
+                    <img src="https://i.ibb.co/fVMmf0zf/Advertmate-Pre-launch-Webinar-and-5-more-pages-Personal-Microsoft-Edge-20-05-2025-12-36-34.png" 
+                         alt="Watch AdvertMate Demo Video" 
+                         class="thumbnail-img">
+                </a>
+            </div>
+
+            <div class="benefits">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Generate Content Instantly</h3>
+                    <p>Create compelling ad copy and visuals in seconds with AI</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Launch Ads in 1 Click</h3>
+                    <p>Deploy campaigns across multiple platforms simultaneously</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Works Across 8 Traffic Sources</h3>
+                    <p>Reach your audience wherever they are</p>
+                </div>
+            </div>
+
+            <div class="timer-section fade-in">
+                <h2>Limited Time Special Offer</h2>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">03</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">23</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">59</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">59</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial-grid">
+                    <div class="testimonial-card fade-in">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ddd'/%3E%3Cpath d='M32 36c-6.6 0-12-5.4-12-12s5.4-12 12-12 12 5.4 12 12-5.4 12-12 12zm0 6c8 0 24 4 24 12v6H8v-6c0-8 16-12 24-12z' fill='%23fff'/%3E%3C/svg%3E" alt="John D." class="testimonial-avatar">
+                        <h3>John D.</h3>
+                        <p>"AdvertMate transformed our advertising workflow. We're saving hours every week and seeing better results than ever. The AI-generated content is impressive!"</p>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ddd'/%3E%3Cpath d='M32 36c-6.6 0-12-5.4-12-12s5.4-12 12-12 12 5.4 12 12-5.4 12-12 12zm0 6c8 0 24 4 24 12v6H8v-6c0-8 16-12 24-12z' fill='%23fff'/%3E%3C/svg%3E" alt="Maya K." class="testimonial-avatar">
+                        <h3>Maya K.</h3>
+                        <p>"As someone with no prior advertising experience, AdvertMate made it incredibly easy to launch successful campaigns. The results speak for themselves!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section" style="text-align: center;">
+                <a href="https://jvz8.com/c/3346269/418037/" class="cta-button">Start for Free Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://jvz8.com/c/3346269/418037/">Privacy Policy</a>
+                <a href="https://jvz8.com/c/3346269/418037/">Contact</a>
+                <a href="https://jvz8.com/c/3346269/418037/">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta" style="display: none;">
+        <a href="https://jvz8.com/c/3346269/418037/" class="cta-button">Start for Free Now</a>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const end = new Date(now.getTime() + (3 * 24 * 60 * 60 * 1000)); // 3 days from now
+            
+            const total = end - now;
+            const seconds = Math.floor((total / 1000) % 60);
+            const minutes = Math.floor((total / 1000 / 60) % 60);
+            const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+            const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top <= window.innerHeight * 0.8;
+                if (isVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Mobile sticky CTA
+        function handleMobileCTA() {
+            const cta = document.querySelector('.mobile-sticky-cta');
+            if (window.innerWidth <= 768) {
+                cta.style.display = 'block';
+            } else {
+                cta.style.display = 'none';
+            }
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', handleScrollAnimations);
+        window.addEventListener('resize', handleMobileCTA);
+        document.addEventListener('DOMContentLoaded', () => {
+            handleScrollAnimations();
+            handleMobileCTA();
+            updateCountdown();
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
